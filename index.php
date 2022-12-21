@@ -62,10 +62,10 @@ $posts = mysqli_query($connection, $query);
                 </div>
                 <div class="post__info">
                     <h3 class="post__title">
-                        <a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a>
+                       <?= $post['title'] ?>
                     </h3>
                     <p class="post__body">
-                        <?= substr($post['body'], 0, 150) ?>...
+                        <?= substr($post['body'], 0, 255) ?>
                     </p>
                     <div class="post__author">
                         <?php

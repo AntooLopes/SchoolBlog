@@ -3,7 +3,7 @@ include 'partials/header.php';
 // fetch current user's posts from database
 $current_user_id = $_SESSION['user-id'];
 
-if ($_SESSION ['user_is_admin']){
+if (isset ($_SESSION ['user_is_admin'])){
     $query = "SELECT id, title FROM posts ORDER BY id DESC";
 
 }else{
